@@ -2,7 +2,8 @@
   "expo": {
     "name": "FinderLovedOnes",
     "slug": "FinderLovedOnes",
-    "version": "1.0.0",
+    "version": "3.0.0",
+    "entryPoint": "./index.js",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -12,7 +13,20 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ryancarlos1.FinderLovedOnes",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Este aplicativo precisa acessar a câmera para tirar fotos.",
+        "NSPhotoLibraryUsageDescription": "Este aplicativo precisa acessar a biblioteca de fotos para selecionar imagens.",
+        "NSLocationWhenInUseUsageDescription": "Este aplicativo precisa acessar sua localização para fornecer informações relevantes com base em onde você está.",
+        "NSMicrophoneUsageDescription": "Este aplicativo precisa acessar o microfone para gravar áudio.",
+        "NSBluetoothAlwaysUsageDescription": "Este aplicativo precisa acessar o Bluetooth para se conectar a dispositivos próximos.",
+        "NSUserTrackingUsageDescription": "Este aplicativo usa rastreamento para melhorar sua experiência e fornecer conteúdo relevante.",
+        "UIBackgroundModes": [
+          "fetch",
+          "remote-notification"
+        ]
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -22,6 +36,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b98791b1-b014-419e-b2b2-556c2fd17827"
+      }
     }
   }
 }
